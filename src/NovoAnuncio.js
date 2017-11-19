@@ -35,10 +35,9 @@ class NovoAnuncio extends Component {
                 })
                 .then(() => {
                         this.setState({ sucesss: true })        
-                 
                 })
-
-            })
+                
+            }).catch( e => console.log(e))
 
         e.preventDefault()
     }
@@ -48,7 +47,7 @@ class NovoAnuncio extends Component {
                 { this.state.sucesss && <Redirect to='/' /> }
                 <HeaderInterno />
                 <div className='container' style={{paddingTop: '120px'}}>
-                    <p>Successs: {this.state.sucesss} </p>
+                    <p> {this.state.sucesss} </p>
                     <h1>Novo Anúncio</h1>
                     <form onSubmit={this.handleSubmit}>
                         <div className='form-group'>
@@ -63,7 +62,7 @@ class NovoAnuncio extends Component {
                             <label htmlFor='nome'>Categorias</label>
                             <select ref={(ref) => this.categoria = ref }>
                                 {
-                                    this.props.categorias.map( cat => <option key={cat.url}>{cat.categoria}</option>)
+                                    this.props.categorias.map( cat => <option key={cat.url} value={cat.url}>{cat.categoria}</option>)
                                 }
                             </select>
                         </div>

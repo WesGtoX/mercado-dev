@@ -21,8 +21,9 @@ class Anuncio extends Component {
     render() {
         const anuncio = this.state.anuncio
 
-        if(this.state.isLoading)
-            return <i className="fa fa-circle-o-notch fa-spin fa-3x fa-f2"></i>
+        if(this.state.isLoading) {
+            return <i className="fa fa-circle-o-notch fa-spin fa-3x fa-fw"></i>
+        }
 
         return(
             <div>
