@@ -24,13 +24,14 @@ class Anuncio extends Component {
         if(this.state.isLoading) {
             return <i className="fa fa-circle-o-notch fa-spin fa-3x fa-fw"></i>
         }
-
+/*eslint-disable */
         return(
             <div>
                 <h1>{anuncio.nome}</h1>
                 <p><img src={anuncio.foto} /></p>
             </div>
         )
+/*eslint-enable */
     }
 }
 export default Anuncio

@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import logo2 from './logo2.png';
 
 const HeaderInterno = (props) => {
+/*eslint-disable */
     return(
         <nav className="navbar navbar-dark fixed-top bg-dark">
         <div className="container">
@@ -20,5 +21,6 @@ const HeaderInterno = (props) => {
         </div>
       </nav>
     )
+/*eslint-enable */
 }
 export default HeaderInterno

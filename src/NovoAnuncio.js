@@ -15,7 +15,9 @@ class NovoAnuncio extends Component {
     handleSubmit(e) {
 
         const file = this.foto.files[0]
+/*eslint-disable */
         const { name, size } = file
+/*eslint-enable */
         const ref = storage.ref(name)
         ref
             .put(file)
